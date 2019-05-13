@@ -1,39 +1,38 @@
-﻿# PixelPlanet.fun Bot prototype
+﻿# PixelPlanet.fun Бот
 
-## BEFORE WE START (Disclaimer)
+## ПЕРЕД НАЧАЛОМ (Отказ от ответственности)
 
-DO NOT ABUSE the bot.
+НЕ злоупотреблять ботом.
 
-Administrators are banning IP addresses of those who abuse bots.
+Администраторы банят IP-адреса тех, кто злоупотребляет ботами.
 
-Multiple bots on same IP won't work properly, since timeout is calculated per IP address.
+Несколько ботов на одном IP не будут работать должным образом, так как время ожидания рассчитано для одного IP-адреса.
 
-* Please do not build huge structures/memes or what ever else it maybe near LEGIT player's artwork. YOUR IP WILL GET BANNED.
-* Admins have informed us that only small paintings or big ones far away from everyone (in Antarctica or what ever) are fine.
-* And as always use **common sense**. What if you were the one trying to build pepe the frog by hand, when suddenly there starts to emerge gigantic d\*\*k right in front of you, blocking 1/3 of your painting. Think about it.
-* One last thing. Bots are supposed to help us, don't abuse them.
+* Пожалуйста, не создавайте огромные структуры/мемы или что-либо еще рядом с творчеством игрока. ВАШ IP будет ЗАБАНЕН.
+* Админы сообщили нам, что хороши только маленькие или большие картины, далеко от всех (в Антарктиде или где-либо еще)..
+* И как всегда используйте **здравый смысл**. Что если бы вы были тем, кто пытался построить Пепе-лягушку вручную, когда внезапно перед вами возникло гигантское изображение, блокирующее 1/3 вашей картины. Думайте об этом.
+* Одна последняя вещь. Боты должны помогать нам, не злоупотребляйте ими.
 
-## Rough steps on how to
+## Как запустить?
 
-1. git pull
-2. *Make sure you have nodejs
-3. npm install
-4. npm start
-5. provide
-  x,
-  y,
-  path to picture,
-  other optional parameters
+1. > **Скачать этот репозиторий**
+2. > **Установить [Node.js](https://nodejs.org/) 8.0.0 или новее**
+3. > **Установить зависимости**
+```shell
+npm i
+```
+4. > **npm start**
+5. > **укажите x, y, путь к изображению, другие дополнительные параметры**
 
-OR
+## ИЛИ ЖЕ
 
-Start program with parameters:
+Запустите программу с параметрами:
 
 ```batch
 npm start -- TopLeftX TopLeftY PathToImage [ShouldDither ContinuousWatching DoNotOverrideColors CustomEdgesMapImagePath]
 ```
 
-Example:
+Пример:
 
 ```batch
 npm start -- 2000 -12000 photo.png y n 6,7,4,5
@@ -43,22 +42,22 @@ npm start -- 2000 -12000 photo.png y n 6,7,4,5
 npm start -- 1100 3300 mario.png n y none
 ```
 
-### Note
+### Заметка
 
-Only first 3 parameters are required.
+Требуются только первые 3 параметра.
 
-"--" here means following parameters will be passed directly to executing program.
+"--" означает, что следующие параметры будут переданы непосредственно в исполняющую программу.
 
 ## Parameters explained
 
-**TopLeftX** - x coordinate to start image from. Matches top left pixel of the image (2000)
+**TopLeftX** - Координата х, с которой начинается изображение. Соответствует верхнему левому пикселю изображения (2000)
 
-**TopLeftY** - Y coordinate to start image from. Matches top left pixel of the image (-12000)
+**TopLeftY** - Координата Y, с которой начинается изображение. Соответствует верхнему левому пикселю изображения (-12000)
 
-**PathToImage** - path to an image to draw. (/home/downloads/mario.png)
+**PathToImage** - Путь к изображению для рисования. (/home/downloads/mario.png)
 
-**ShouldDither** - Dithering is a way to keep picture looking more "original like" with low amount of colors by adding noise to the image, recommended for photos. Without this a photo would look plain and have a very low color depth look. Enable this feature or not? (y/n)
+**ShouldDither** - Дизеринг - это способ сохранить изображение более «оригинальным» с небольшим количеством цветов, добавляя к изображению шум, рекомендуемый для фотографий. Без этого фотография выглядела бы просто и имела бы очень низкую глубину цвета. Включить эту функцию или нет? (y/n)
 
-**ContinuousWatching** - After program finishes, do you want to keep watching over the drawing for any griefings, and keep on fixing? (y/n)
+**ContinuousWatching** - После завершения программы, хотите ли вы следить за рисунком и продолжать исправлять, если кто-то зарисует?(y/n)
 
-**DoNotOverrideColors** - Option to specify color ids to not draw over. **Write any string if not used**. Used if you want to draw around something, ex. draw rainbow only on white color around other colored drawings. I used it to allow others to contribute live to the progress and not draw over their parts. Specifying "2,6" would ignore all white and black pixels playrs have placed. (2,3,4,5)
+**DoNotOverrideColors** - Возможность указать цветовые идентификаторы, который не надо рисовать. **Напишите любую строку, если не используется**. Используется, если вы хотите что-то нарисовать, напр. рисовать радугу только белым цветом вокруг других цветных рисунков. Я использовал это, чтобы позволить другим вносить вклад в прогресс, а не использовать их части. Указание «2,6» будет игнорировать все белые и черные пиксели, которые разместили проигрыватели. (2,3,4,5)
