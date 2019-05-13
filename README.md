@@ -15,7 +15,7 @@
 
 ## Как запустить?
 
-1. > **Скачать этот репозиторий**
+1. > [![BOT Скачать](https://img.shields.io/badge/pixelplanet%20bot-%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-purple.svg?logo=github&style=for-the-badge)](https://github.com/mudachyo/pixelplanet-bot/archive/master.zip)
 2. > **Установить [Node.js](https://nodejs.org/) 8.0.0 или новее**
 3. > **Установить зависимости**
 ```shell
